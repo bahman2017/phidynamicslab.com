@@ -32,7 +32,7 @@ body {
     position: relative;
 }
 
-/* Background Image - Mathematics, Physics, Quantum & Protein Design Theme */
+/* Background Image - Premium Scientific Theme: Math, Physics, Quantum & Protein Design */
 body::before {
     content: '';
     position: fixed;
@@ -42,19 +42,20 @@ body::before {
     height: 100%;
     z-index: -1;
     background-image: 
-        /* Dark overlay for text readability */
-        linear-gradient(135deg, rgba(10, 14, 39, 0.88) 0%, rgba(26, 31, 58, 0.92) 100%),
-        /* Combined scientific visualization: Math formulas, Quantum structures, Protein design */
-        /* This image shows mathematical equations, quantum physics concepts, and molecular structures */
-        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+        /* Dark overlay for text readability - stronger overlay */
+        linear-gradient(135deg, rgba(10, 14, 39, 0.90) 0%, rgba(26, 31, 58, 0.93) 100%),
+        /* Premium scientific visualization: Complex network with math, quantum, and molecular structures */
+        /* Shows interconnected scientific concepts: equations, quantum states, protein structures */
+        url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
     background-size: 100% 100%, cover;
     background-position: center, center;
     background-attachment: fixed;
-    background-blend-mode: normal, overlay;
+    background-blend-mode: normal, multiply;
     opacity: 1;
+    filter: brightness(0.4) contrast(1.1);
 }
 
-/* Additional layer for more depth - Molecular/Protein structures overlay */
+/* Additional subtle layer - Scientific formulas and structures */
 body::after {
     content: '';
     position: fixed;
@@ -64,13 +65,14 @@ body::after {
     height: 100%;
     z-index: -1;
     background-image: 
-        /* Subtle molecular/protein structure pattern */
-        url('https://images.unsplash.com/photo-1532619675605-1ede6c9ed2d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+        /* Scientific blackboard with physics and math equations */
+        url('https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-blend-mode: overlay;
-    opacity: 0.15;
+    opacity: 0.12;
+    filter: grayscale(100%) brightness(0.3);
 }
 
 /* Alternative background images - Mathematics, Physics, Quantum & Protein Design */
