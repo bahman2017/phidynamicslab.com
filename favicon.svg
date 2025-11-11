@@ -8,7 +8,7 @@
   <!-- Elliptical background -->
   <ellipse cx="60" cy="50" rx="58" ry="48" fill="#0a0e27"/>
   <!-- Phi symbol - perfectly centered -->
-  <text x="60" y="63" font-family="Georgia, serif" font-size="85" font-weight="bold" 
+  <text x="60" y="64" font-family="Georgia, serif" font-size="95" font-weight="bold" 
         fill="url(#goldGradient)" text-anchor="middle" dominant-baseline="middle">Φ</text>
 </svg>
 
