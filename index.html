@@ -3,94 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Phi Dynamics Lab - Research and Innovation">
-    <title>Phi Dynamics Lab</title>
+    <meta name="description" content="Phi Dynamics Lab - Leading interdisciplinary R&D partner specializing in Advanced AI and Modern Physics for complex biological and technological problems">
+    <title>Phi Dynamics Lab | Advanced AI & Modern Physics Research</title>
+    
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-navy': '#0a0e27',
+                        'dark-blue': '#1a1f3a',
+                        'navy': '#1e2749',
+                        'purple': '#7c3aed',
+                        'purple-dark': '#5b21b6',
+                        'teal': '#14b8a6',
+                        'teal-dark': '#0d9488',
+                        'gold': '#fbbf24',
+                        'gold-dark': '#f59e0b',
+                        'gold-light': '#fcd34d',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Tailwind CSS CDN for fast loading -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-brand">
-                    <h1>Phi Dynamics Lab</h1>
+<body class="bg-dark-navy text-gray-100">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-dark-navy/95 backdrop-blur-sm border-b border-purple-900/30">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-gold to-gold-dark rounded-lg flex items-center justify-center">
+                        <span class="text-dark-navy font-bold text-xl">Φ</span>
+                    </div>
+                    <span class="text-xl font-bold text-white">Phi Dynamics Lab</span>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#disciplines" class="nav-link">Core Disciplines</a></li>
+                    <li><a href="#methodology" class="nav-link">Technology</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#partnership" class="nav-link">Partnership</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                
+                <!-- CTA Button -->
+                <a href="#contact" class="hidden md:block btn-cta">
+                    Explore Collaborative Opportunities
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-gold transition-colors">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="#home" class="nav-link-mobile">Home</a></li>
+                    <li><a href="#disciplines" class="nav-link-mobile">Core Disciplines</a></li>
+                    <li><a href="#methodology" class="nav-link-mobile">Technology</a></li>
+                    <li><a href="#projects" class="nav-link-mobile">Projects</a></li>
+                    <li><a href="#partnership" class="nav-link-mobile">Partnership</a></li>
+                    <li><a href="#contact" class="nav-link-mobile">Contact</a></li>
+                    <li><a href="#contact" class="btn-cta-mobile">Explore Collaborative Opportunities</a></li>
+                </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Welcome to Phi Dynamics Lab</h2>
-                <p>Advancing research and innovation in dynamic systems</p>
-                <a href="#about" class="btn btn-primary">Learn More</a>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+            <!-- Animated Background Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <canvas id="hero-canvas" class="w-full h-full"></canvas>
+            </div>
+            
+            <!-- Geometric Pattern Overlay -->
+            <div class="absolute inset-0 phi-pattern opacity-5"></div>
+            
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gold via-teal to-purple bg-clip-text text-transparent leading-tight">
+                        Phi Dynamics Lab
+                    </h1>
+                    <h2 class="text-2xl md:text-4xl font-semibold mb-4 text-gray-200">
+                        The Intersection of Advanced AI, Modern Physics, and Complex Systems
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                        Applying Dynamic System Modeling to Forge Breakthroughs in Biology, Genetics, and Quantum Technology
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#disciplines" class="btn-primary">
+                            Explore Our Research
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            Start Collaboration
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <i class="fas fa-chevron-down text-gold text-2xl"></i>
             </div>
         </section>
 
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Us</h2>
-                <p>Phi Dynamics Lab is dedicated to cutting-edge research in dynamic systems, mathematical modeling, and computational analysis. Our mission is to push the boundaries of knowledge and contribute to scientific advancement.</p>
-            </div>
-        </section>
-
-        <section id="research" class="section section-alt">
-            <div class="container">
-                <h2>Research Areas</h2>
-                <div class="research-grid">
-                    <div class="research-card">
-                        <h3>Dynamic Systems</h3>
-                        <p>Exploring complex dynamic behaviors and system interactions.</p>
+        <!-- Core Disciplines Section -->
+        <section id="disciplines" class="py-20 relative">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                        Our Interdisciplinary Focus
+                    </h2>
+                    <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                        Three core disciplines driving innovation at the intersection of physics, AI, and biology
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Bio-Dynamics Card -->
+                    <div class="discipline-card group">
+                        <div class="card-icon bg-gradient-to-br from-teal to-teal-dark">
+                            <i class="fas fa-dna text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Bio-Dynamics</h3>
+                        <p class="text-gray-400 mb-4">
+                            Focused on <span class="text-gold font-semibold">Protein Design and Genetics</span>, targeting efficiency and stability through advanced computational modeling.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-400 mb-6">
+                            <li><i class="fas fa-check text-teal mr-2"></i>Protein structure prediction</li>
+                            <li><i class="fas fa-check text-teal mr-2"></i>Genetic optimization</li>
+                            <li><i class="fas fa-check text-teal mr-2"></i>Stability analysis</li>
+                        </ul>
+                        <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
-                    <div class="research-card">
-                        <h3>Mathematical Modeling</h3>
-                        <p>Developing advanced models to understand real-world phenomena.</p>
+                    
+                    <!-- Quantum Dynamics Card -->
+                    <div class="discipline-card group">
+                        <div class="card-icon bg-gradient-to-br from-purple to-purple-dark">
+                            <i class="fas fa-atom text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Quantum Dynamics</h3>
+                        <p class="text-gray-400 mb-4">
+                            Focused on <span class="text-gold font-semibold">Quantum Computing Noise Reduction (QCNR)</span>, enabling more reliable quantum computations.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-400 mb-6">
+                            <li><i class="fas fa-check text-purple mr-2"></i>Noise mitigation algorithms</li>
+                            <li><i class="fas fa-check text-purple mr-2"></i>Error correction systems</li>
+                            <li><i class="fas fa-check text-purple mr-2"></i>Quantum state optimization</li>
+                        </ul>
+                        <a href="#projects" class="card-link">View Project <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
-                    <div class="research-card">
-                        <h3>Computational Analysis</h3>
-                        <p>Leveraging computational methods for scientific discovery.</p>
+                    
+                    <!-- Predictive Systems Card -->
+                    <div class="discipline-card group">
+                        <div class="card-icon bg-gradient-to-br from-gold to-gold-dark">
+                            <i class="fas fa-chart-line text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Predictive Systems</h3>
+                        <p class="text-gray-400 mb-4">
+                            Focused on <span class="text-gold font-semibold">Advanced Computational Models</span> for complex system forecasting and behavior prediction.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-400 mb-6">
+                            <li><i class="fas fa-check text-gold mr-2"></i>Non-linear dynamics modeling</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i>System forecasting</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i>Behavioral prediction</li>
+                        </ul>
+                        <a href="#methodology" class="card-link">Explore Methodology <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="publications" class="section">
-            <div class="container">
-                <h2>Publications</h2>
-                <p>Our latest research contributions and publications will be listed here.</p>
+        <!-- Technology/Methodology Section -->
+        <section id="methodology" class="py-20 bg-dark-blue/50 relative">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                            The Dynamic Systems Approach
+                        </h2>
+                        <div class="w-24 h-1 bg-gradient-to-r from-gold via-teal to-purple mx-auto mb-6"></div>
+                    </div>
+                    
+                    <div class="methodology-content">
+                        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                            At Phi Dynamics Lab, we employ a unique methodology that combines <span class="text-gold font-semibold">Modern Physics</span> principles—particularly non-linear dynamics and system theory—with <span class="text-teal font-semibold">Advanced AI and Machine Learning</span> techniques to model, predict, and optimize complex behaviors across biological and technological domains.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-8 mt-10">
+                            <div class="method-card">
+                                <div class="method-icon">
+                                    <i class="fas fa-wave-square text-3xl text-purple"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 text-white">Non-Linear Dynamics</h3>
+                                <p class="text-gray-400">
+                                    Applying principles from chaos theory, bifurcation analysis, and phase space dynamics to understand system behaviors.
+                                </p>
+                            </div>
+                            
+                            <div class="method-card">
+                                <div class="method-icon">
+                                    <i class="fas fa-brain text-3xl text-teal"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 text-white">Advanced AI/ML</h3>
+                                <p class="text-gray-400">
+                                    Leveraging deep learning, neural networks, and reinforcement learning to extract patterns and optimize system parameters.
+                                </p>
+                            </div>
+                            
+                            <div class="method-card">
+                                <div class="method-icon">
+                                    <i class="fas fa-project-diagram text-3xl text-gold"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 text-white">System Integration</h3>
+                                <p class="text-gray-400">
+                                    Bridging theoretical physics with practical applications through computational modeling and simulation.
+                                </p>
+                            </div>
+                            
+                            <div class="method-card">
+                                <div class="method-icon">
+                                    <i class="fas fa-flask text-3xl text-purple"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 text-white">Empirical Validation</h3>
+                                <p class="text-gray-400">
+                                    Ensuring model accuracy through rigorous testing, validation, and iterative refinement based on real-world data.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="section section-alt">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Get in touch with us for collaborations, inquiries, or more information.</p>
-                <div class="contact-info">
-                    <p>Email: <a href="mailto:contact@phidynamicslab.com">contact@phidynamicslab.com</a></p>
+        <!-- Featured Project: QCNR -->
+        <section id="projects" class="py-20 relative">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-12">
+                        <span class="inline-block px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-semibold mb-4">
+                            Flagship Project
+                        </span>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                            Quantum Noise Mitigation
+                        </h2>
+                        <p class="text-gray-400 text-lg">
+                            A ready-to-integrate solution for quantum computing reliability
+                        </p>
+                    </div>
+                    
+                    <div class="project-showcase">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-white">QCNR: Quantum Computing Noise Reduction</h3>
+                                <p class="text-gray-300 mb-6 leading-relaxed">
+                                    Our flagship project addresses one of the most critical challenges in quantum computing: noise and decoherence. QCNR is a comprehensive solution that combines advanced error correction algorithms with dynamic system modeling to significantly improve quantum computation reliability.
+                                </p>
+                                
+                                <div class="space-y-4 mb-6">
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle text-teal mr-3"></i>
+                                        <span class="text-gray-300">Ready-to-integrate API and SDK</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle text-teal mr-3"></i>
+                                        <span class="text-gray-300">Real-time noise mitigation</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle text-teal mr-3"></i>
+                                        <span class="text-gray-300">Compatible with major quantum platforms</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle text-teal mr-3"></i>
+                                        <span class="text-gray-300">Proven reduction in error rates</span>
+                                    </div>
+                                </div>
+                                
+                                <a href="#contact" class="btn-primary inline-flex items-center">
+                                    Request Technical Details <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="project-visual">
+                                <div class="quantum-visualization">
+                                    <canvas id="quantum-canvas" class="w-full h-64 rounded-lg"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership & Team Section -->
+        <section id="partnership" class="py-20 bg-dark-blue/50 relative">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                        Collaborate with Pioneers
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-gold via-teal to-purple mx-auto mb-8"></div>
+                    
+                    <p class="text-lg text-gray-300 mb-12 leading-relaxed">
+                        Our team brings together world-class expertise in Physics, Artificial Intelligence, and Bio-Informatics. With Ph.D.-level researchers and industry veterans, we offer a unique interdisciplinary perspective that drives breakthrough innovations.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-12">
+                        <div class="expertise-card">
+                            <i class="fas fa-graduation-cap text-4xl text-purple mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-white">Ph.D. Expertise</h3>
+                            <p class="text-gray-400 text-sm">
+                                Advanced degrees in Physics, AI, and Computational Biology
+                            </p>
+                        </div>
+                        
+                        <div class="expertise-card">
+                            <i class="fas fa-users text-4xl text-teal mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-white">Interdisciplinary</h3>
+                            <p class="text-gray-400 text-sm">
+                                Cross-domain knowledge bridging theory and application
+                            </p>
+                        </div>
+                        
+                        <div class="expertise-card">
+                            <i class="fas fa-handshake text-4xl text-gold mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-white">R&D Focused</h3>
+                            <p class="text-gray-400 text-sm">
+                                Specialized in collaborative research and development partnerships
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="partnership-cta">
+                        <p class="text-xl text-gray-200 mb-6">
+                            R&D departments and research institutions: Let's explore how we can advance your projects together.
+                        </p>
+                        <a href="#contact" class="btn-primary text-lg px-8 py-4">
+                            Initiate Partnership Discussion
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Inquiry Section -->
+        <section id="contact" class="py-20 relative">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                            Get in Touch
+                        </h2>
+                        <p class="text-gray-400 text-lg">
+                            Ready to collaborate? Reach out to discuss your research needs or partnership opportunities.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-container">
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div class="contact-card">
+                                <div class="contact-icon bg-gradient-to-br from-teal to-teal-dark">
+                                    <i class="fas fa-envelope text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Scientific Inquiries</h3>
+                                <a href="mailto:research@phidynamicslab.com" class="text-gold hover:text-gold-light transition-colors">
+                                    research@phidynamicslab.com
+                                </a>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon bg-gradient-to-br from-purple to-purple-dark">
+                                    <i class="fas fa-briefcase text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Business Development</h3>
+                                <a href="mailto:partner@phidynamicslab.com" class="text-gold hover:text-gold-light transition-colors">
+                                    partner@phidynamicslab.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Form -->
+                        <form id="contact-form" class="contact-form">
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" id="name" name="name" class="form-input" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" rows="6" class="form-input" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary w-full md:w-auto">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Phi Dynamics Lab. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-dark-navy border-t border-purple-900/30 py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="w-8 h-8 bg-gradient-to-br from-gold to-gold-dark rounded-lg flex items-center justify-center">
+                        <span class="text-dark-navy font-bold">Φ</span>
+                    </div>
+                    <span class="text-gray-400">© 2025 Phi Dynamics Lab. All rights reserved.</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-gold transition-colors">Home</a>
+                    <a href="#disciplines" class="text-gray-400 hover:text-gold transition-colors">Research</a>
+                    <a href="#contact" class="text-gray-400 hover:text-gold transition-colors">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
